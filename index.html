@@ -14,7 +14,8 @@
     <h1>These should switch out between audio and video components:</h1>
 
     <main id="app">
-        <button @click="switchComponents">Switch!</button>
+        <!-- <button @click="switchComponents">Switch!</button> -->
+        <buttoncomponent @setmediatype="setComponent"></buttoncomponent>
         <h2>Currently active:</h2>
 
         <!-- conditionally render a component using the generic component tag -->

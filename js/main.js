@@ -1,5 +1,7 @@
 import AudioComponent from "./components/TheAudioComponent.js";
 import VideoComponent from "./components/TheVideoComponent.js";
+import ImageComponent from "./components/TheImageComponent.js";
+import ButtonComponent from "./components/TheButtonComponent.js";
 
 (() => {
     const myVM = new Vue({
@@ -8,11 +10,23 @@ import VideoComponent from "./components/TheVideoComponent.js";
         },
 
         methods: {
-            switchComponents() {
-                //debugger;
+            // switchComponents() {
+            //     //debugger;
 
-                this.activeComponent = (this.activeComponent.name == "VideoComponent") ? AudioComponent : VideoComponent;
+            //     this.activeComponent = (this.activeComponent.name == "VideoComponent") ? AudioComponent : VideoComponent;
+            // },
+
+            setComponent(component) {
+                //debugger;
+                this.activeComponent = `${component}Component`;
             }
+        },
+
+        components: {
+            AudioComponent,
+            VideoComponent,
+            ImageComponent,
+            "buttoncomponent" : ButtonComponent
         }
     }).$mount("#app");
 })();
